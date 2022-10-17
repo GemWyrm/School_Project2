@@ -3,7 +3,7 @@ by Jared Clyde.
 Project displaying API proficiency.
 Site allowing for searching of Giphy images.
 Using HTML, CSS, SASS, and JavaScript.
-Future imrovements:
+Future improvements:
     1.
     2.
     3.
