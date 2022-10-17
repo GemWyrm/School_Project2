@@ -1,0 +1,2 @@
+1.As a minor, I want to search GIFs, so that I can share them with my friends.
+2.As a parent, I want to have safe searches, so that my child isn't exposed to inappropriate material behind my back.
