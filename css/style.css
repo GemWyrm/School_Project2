@@ -5,4 +5,23 @@ footer {
   width: 100%;
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main img {
+  width: 30%;
+  padding: 2.5% 0;
+  height: auto;
+  object-fit: scale-down;
+}
+
+@media screen and (max-width: 320px) {
+  main img {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

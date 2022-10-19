@@ -2,6 +2,7 @@ const gifEnd = 'https://api.giphy.com/v1/gifs/search?api_key='+API_KEY+'&rating=
 const stickerEnd = 'https://api.giphy.com/v1/stickers/search?api_key='+API_KEY+'&rating=g,pg';
 const display = document.querySelector('main');
 const images = document.createElement('img');
+images.loading = 'lazy';
 //console.log(gifEnd, stickerEnd);
 fetch(gifEnd).then(function(res){
     //console.log(res);
