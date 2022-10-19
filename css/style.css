@@ -3,6 +3,14 @@ footer {
   left: 0px;
   bottom: 0px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer img {
+  height: 20px;
+  width: auto;
+  object-fit: scale-down;
 }
 
 header {
