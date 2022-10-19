@@ -31,13 +31,12 @@ h1 img {
 
 main {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: wrap; /*justify-content: space-between;*/
+  gap: 1.88em;
 }
 
 main img {
-  width: 30%;
-  padding: 2.5% 0;
+  width: 32%; /*padding: 2.5% 0;*/
   height: auto;
   object-fit: scale-down;
 }
