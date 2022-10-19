@@ -18,6 +18,17 @@ header {
   justify-content: space-between;
 }
 
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+h1 img {
+  height: 37px;
+  width: auto;
+  object-fit: scale-down;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
