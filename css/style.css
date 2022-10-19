@@ -5,6 +5,11 @@ footer {
   width: 100%;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -22,6 +27,23 @@ main img {
   main img {
     width: 100%;
   }
+}
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
