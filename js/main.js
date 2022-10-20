@@ -1,5 +1,5 @@
-var gifEnd = 'https://api.giphy.com/v1/gifs/search?api_key='+API_KEY+'&rating=g,pg&q=';
-var stickerEnd = 'https://api.giphy.com/v1/stickers/search?api_key='+API_KEY+'&rating=g,pg&q=';
+const gifEnd = 'https://api.giphy.com/v1/gifs/search?api_key='+API_KEY+'&rating=g,pg&q=';
+const stickerEnd = 'https://api.giphy.com/v1/stickers/search?api_key='+API_KEY+'&rating=g,pg&q=';
 const displayGif = document.querySelector('#gif');
 const displaySticker = document.querySelector('#sticker');
 const images = document.createElement('img');
@@ -9,8 +9,9 @@ const userGif = document.querySelector('#gif-input');
 const submitGif = document.querySelector('#gif-btn');
 submitGif.addEventListener('click', inputGif);
 function inputGif () {
-    gifEnd += userGif.value;
-    fetch(gifEnd).then(function(res){
+    displayGif.innerHTML = '';
+    let gifNew = gifEnd + userGif.value;
+    fetch(gifNew).then(function(res){
         //console.log(res);
         return res.json()
     }).then(function(giphy){
@@ -36,8 +37,9 @@ const userStick = document.querySelector('#stick-input');
 const submitStick = document.querySelector('#stick-btn');
 submitStick.addEventListener('click', inputStick);
 function inputStick () {
-    stickerEnd += userStick.value;
-    fetch(stickerEnd).then(function(res){
+    displaySticker.innerHTML = '';
+    let stickerNew = stickerEnd + userStick.value;
+    fetch(stickerNew).then(function(res){
         //console.log(res);
         return res.json()
     }).then(function(giphy){
