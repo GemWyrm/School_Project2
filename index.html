@@ -16,24 +16,38 @@
     <header>
         <h1>Search&nbsp;<img src="./Giphy_wordmark.svg" alt="GIPHY">'s&nbsp;API</h1>
         <nav>
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a href="#" class="nav-link active" aria-current="page">GIFs</a>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a href="#GIFs-tab-pane" class="nav-link active" id="GIFs-tab" data-bs-toggle="tab" role="tab" aria-controls="GIFs-tab-pane" aria-selected="true">GIFs</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Stickers</a>
+                <li class="nav-item" role="presentation">
+                    <a href="#Stickers-tab-pane" class="nav-link" id="Stickers-tab" data-bs-toggle="tab" role="tab" aria-controls="Stickers-tab-pane" aria-selected="false">Stickers</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link disabled">Favorites</a>
+                <li class="nav-item" role="presentation">
+                    <a href="#Favorites-tab-pane" class="nav-link disabled" id="Favorites-tab" data-bs-toggle="tab" role="tab" aria-controls="Favorites-tab-pane" aria-selected="false">Favorites</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <form action="#">
-        <label for="">GIFs: <input type="text" name="" id=""></label>
-        <button type="submit">Search</button>
-    </form>
-    <main></main>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="GIFs-tab-pane" role="tabpanel" aria-labelledby="GIFs-tab" tabindex="0">
+            <form action="#">
+                <label for="">GIFs: <input type="text" name="" id=""></label>
+                <button type="submit">Search</button>
+            </form>
+            <main></main>
+        </div>
+        <div class="tab-pane fade" id="Stickers-tab-pane" role="tabpanel" aria-labelledby="Stickers-tab" tabindex="0">
+            <form action="#">
+                <label for="">Stickers: <input type="text" name="" id=""></label>
+                <button type="submit">Search</button>
+            </form>
+            <main></main>
+        </div>
+        <div class="tab-pane fade" id="Favorites-tab-pane" role="tabpanel" aria-labelledby="Favorites-tab" tabindex="0">
+            <main></main>
+        </div>
+    </div>
     <footer>Powered by&nbsp;<img src="./GIPHY Logo 30px.png" alt="GIPHY"></footer>
     <script src="./js/main.js"></script>
 </body>
