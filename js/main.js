@@ -18,6 +18,7 @@ fetch(gifEnd).then(function(res){
     }*/giphy.data.forEach(val => {
         console.log(val.images.original.url);
         images.src = val.images.original.url;
+        images.alt = val.title;
         display.innerHTML += '';
         display.appendChild(images);
     });
