@@ -16,7 +16,7 @@ fetch(gifEnd).then(function(res){
         display.innerHTML += '';
         display.appendChild(images);
     }*/giphy.data.forEach(val => {
-        //console.log(val.images.original.url);
+        console.log(val.images.original.url);
         images.src = val.images.original.url;
         display.innerHTML += '';
         display.appendChild(images);
