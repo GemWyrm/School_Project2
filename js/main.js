@@ -1,27 +1,61 @@
-const gifEnd = 'https://api.giphy.com/v1/gifs/search?api_key='+API_KEY+'&rating=g,pg&limit=10&q=dragons';
-const stickerEnd = 'https://api.giphy.com/v1/stickers/search?api_key='+API_KEY+'&rating=g,pg';
-const displayGif = document.querySelector('main#gif');
+var gifEnd = 'https://api.giphy.com/v1/gifs/search?api_key='+API_KEY+'&rating=g,pg&q=';
+var stickerEnd = 'https://api.giphy.com/v1/stickers/search?api_key='+API_KEY+'&rating=g,pg&q=';
+const displayGif = document.querySelector('#gif');
+const displaySticker = document.querySelector('#sticker');
 const images = document.createElement('img');
 images.loading = 'lazy';
 //console.log(gifEnd, stickerEnd);
-fetch(gifEnd).then(function(res){
-    //console.log(res);
-    return res.json()
-}).then(function(giphy){
-    console.log(giphy);
-    /*const val = giphy.data;
-    for (let i = 0; i < val.length; i++) {
-        //console.log(val[i].images.original.url);
-        images.src = val[i].images.original.url;
-        displayGif.innerHTML += '';
-        displayGif.appendChild(images);
-    }*/giphy.data.forEach(val => {
-        console.log(val.images.original.url);
-        images.src = val.images.original.url;
-        images.alt = val.title;
-        displayGif.innerHTML += '';
-        displayGif.appendChild(images);
+const userGif = document.querySelector('#gif-input');
+const submitGif = document.querySelector('#gif-btn');
+submitGif.addEventListener('click', inputGif);
+function inputGif () {
+    gifEnd += userGif.value;
+    fetch(gifEnd).then(function(res){
+        //console.log(res);
+        return res.json()
+    }).then(function(giphy){
+        console.log(giphy);
+        /*const val = giphy.data;
+        for (let i = 0; i < val.length; i++) {
+            //console.log(val[i].images.original.url);
+            images.src = val[i].images.original.url;
+            displayGif.innerHTML += '';
+            displayGif.appendChild(images);
+        }*/giphy.data.forEach(val => {
+            console.log(val.images.original.url);
+            images.src = val.images.original.url;
+            images.alt = val.title;
+            displayGif.innerHTML += '';
+            displayGif.appendChild(images);
+        });
+    }).catch(function(error){
+        console.log(error);
     });
-}).catch(function(error){
-    console.log(error);
-});
+};
+const userStick = document.querySelector('#stick-input');
+const submitStick = document.querySelector('#stick-btn');
+submitStick.addEventListener('click', inputStick);
+function inputStick () {
+    stickerEnd += userStick.value;
+    fetch(stickerEnd).then(function(res){
+        //console.log(res);
+        return res.json()
+    }).then(function(giphy){
+        console.log(giphy);
+        /*const val = giphy.data;
+        for (let i = 0; i < val.length; i++) {
+            //console.log(val[i].images.original.url);
+            images.src = val[i].images.original.url;
+            displaySticker.innerHTML += '';
+            displaySticker.appendChild(images);
+        }*/giphy.data.forEach(val => {
+            console.log(val.images.original.url);
+            images.src = val.images.original.url;
+            images.alt = val.title;
+            displaySticker.innerHTML += '';
+            displaySticker.appendChild(images);
+        });
+    }).catch(function(error){
+        console.log(error);
+    });
+};
