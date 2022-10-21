@@ -63,12 +63,22 @@ li {
 nav {
     display: flex; align-items: center;
 }*/
+.nav-link:hover:not(.active, .disabled) {
+  border-color: #6B5431 #6B5431 #6B6151 !important;
+  color: #284F56 !important;
+}
+
 .nav-link.active {
-  border-color: #EBD5B3 #EBD5B3 #fff !important;
+  border-color: #6B6151 #6B6151 #FFF1DB !important;
+  background-color: #FFF1DB !important;
 }
 
 .nav-tabs {
-  border-block-color: #EBD5B3 !important;
+  border-bottom-color: #6B6151 !important;
+}
+
+.nav-link:not(.active, .disabled) {
+  color: #2F5C64 !important;
 }
 
 form {

@@ -7,9 +7,16 @@ li {
 nav {
     display: flex; align-items: center;
 }*/ //Bootstrap does this for me.
+.nav-link:hover:not(.active, .disabled) {
+    border-color: $color5 $color5 $color6 !important; color: $text-color3 !important;
+}
 .nav-link.active {
-    border-color: $middle-color $middle-color #fff !important;
+    border-color: $color6 $color6 $inner-color !important;
+    background-color: $inner-color !important;
 }
 .nav-tabs {
-    border-block-color: $middle-color !important;
+    border-bottom-color: $color6 !important;
+}
+.nav-link:not(.active, .disabled) {
+    color: $text-color !important;
 }
