@@ -1,8 +1,8 @@
 main {
-    display: flex; flex-wrap: wrap; /*justify-content: space-between;*/ gap: 1.88em;
+    display: flex; flex-wrap: wrap; justify-content: space-between; row-gap: 1.88em;
 }
 main img {
-    width: 32%; /*padding: 2.5% 0;*/ height: auto; object-fit: scale-down;
+    width: 32%; height: auto; object-fit: scale-down;
 }
 @media screen and (max-width: 320px) {
     main img {
