@@ -1,3 +1,11 @@
+/*@function gradient($direction, $outer-color, $inner-color, $outer-color) {
+    @return linear-gradient($direction, $outer-color, $inner-color, $outer-color);
+};*/
+/*@import 'bootstrap';*/
+body {
+  background: linear-gradient(90deg, #9E8968, #FFF1DB, #9E8968);
+}
+
 footer {
   position: fixed;
   left: 0px;
@@ -46,17 +54,21 @@ main img {
     width: 100%;
   }
 }
-ul {
-  list-style: none;
+/*ul {
+    list-style: none;
 }
-
 li {
-  display: inline-block;
+    display: inline-block;
+}
+nav {
+    display: flex; align-items: center;
+}*/
+.nav-link.active {
+  border-color: #EBD5B3 #EBD5B3 #fff !important;
 }
 
-nav {
-  display: flex;
-  align-items: center;
+.nav-tabs {
+  border-block-color: #EBD5B3 !important;
 }
 
 form {

@@ -1,4 +1,4 @@
-ul {
+/*ul {
     list-style: none;
 }
 li {
@@ -6,4 +6,10 @@ li {
 }
 nav {
     display: flex; align-items: center;
+}*/ //Bootstrap does this for me.
+.nav-link.active {
+    border-color: $middle-color $middle-color #fff !important;
+}
+.nav-tabs {
+    border-block-color: $middle-color !important;
 }
