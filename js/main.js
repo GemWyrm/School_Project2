@@ -2,8 +2,6 @@ const gifEnd = 'https://api.giphy.com/v1/gifs/search?api_key='+API_KEY+'&rating=
 const stickerEnd = 'https://api.giphy.com/v1/stickers/search?api_key='+API_KEY+'&rating=g,pg&q=';
 const displayGif = document.querySelector('#gif');
 const displaySticker = document.querySelector('#sticker');
-const images = document.createElement('img');
-images.loading = 'lazy';
 //console.log(gifEnd, stickerEnd);
 const userGif = document.querySelector('#gif-input');
 const submitGif = document.querySelector('#gif-btn');
@@ -16,17 +14,12 @@ function inputGif () {
         return res.json()
     }).then(function(giphy){
         console.log(giphy);
-        /*const val = giphy.data;
-        for (let i = 0; i < val.length; i++) {
-            //console.log(val[i].images.original.url);
-            images.src = val[i].images.original.url;
-            displayGif.innerHTML += '';
-            displayGif.appendChild(images);
-        }*/giphy.data.forEach(val => {
+        giphy.data.forEach(val => {
             console.log(val.images.original.url);
+            const images = document.createElement('img');
+            images.loading = 'lazy';
             images.src = val.images.original.url;
             images.alt = val.title;
-            displayGif.innerHTML += '';
             displayGif.appendChild(images);
         });
     }).catch(function(error){
@@ -52,9 +45,10 @@ function inputStick () {
             displaySticker.appendChild(images);
         }*/giphy.data.forEach(val => {
             console.log(val.images.original.url);
+            const images = document.createElement('img');
+            images.loading = 'lazy';
             images.src = val.images.original.url;
             images.alt = val.title;
-            displaySticker.innerHTML += '';
             displaySticker.appendChild(images);
         });
     }).catch(function(error){
