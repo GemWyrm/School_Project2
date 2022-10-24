@@ -13,9 +13,9 @@ function inputGif () {
         //console.log(res);
         return res.json()
     }).then(function(giphy){
-        console.log(giphy);
+        //console.log(giphy);
         giphy.data.forEach(val => {
-            console.log(val.images.original.url);
+            //console.log(val.images.original.url);
             const images = document.createElement('img');
             images.loading = 'lazy';
             images.src = val.images.original.url;
@@ -36,15 +36,9 @@ function inputStick () {
         //console.log(res);
         return res.json()
     }).then(function(giphy){
-        console.log(giphy);
-        /*const val = giphy.data;
-        for (let i = 0; i < val.length; i++) {
-            //console.log(val[i].images.original.url);
-            images.src = val[i].images.original.url;
-            displaySticker.innerHTML += '';
-            displaySticker.appendChild(images);
-        }*/giphy.data.forEach(val => {
-            console.log(val.images.original.url);
+        //console.log(giphy);
+        giphy.data.forEach(val => {
+            //console.log(val.images.original.url);
             const images = document.createElement('img');
             images.loading = 'lazy';
             images.src = val.images.original.url;
@@ -58,3 +52,13 @@ function inputStick () {
 $('#menu').click(function(){
     $('header').toggle();
 });
+//Credit to Robert Utasi
+/*resize = function(){
+    var grid = document.getElementById('main');
+      var items = Math.floor(grid.scrollWidth/100);
+      grid.style.rowGap = 
+          ((grid.scrollWidth - (items*100)) / (items-1)) + 'px';
+  };
+  window.onresize = resize;
+  resize();*/
+  //Code only works when element width length is absolute.

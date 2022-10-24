@@ -1,12 +1,3 @@
-/*ul {
-    list-style: none;
-}
-li {
-    display: inline-block;
-}
-nav {
-    display: flex; align-items: center;
-}*/ //Bootstrap does this for me.
 .nav-link:hover:not(.active, .disabled) {
     border-color: $color5 $color5 $color6 !important; color: $text-color3 !important;
 }
