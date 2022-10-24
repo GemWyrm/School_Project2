@@ -7,3 +7,4 @@ Future improvements:
     1. Save GIFs to Favorites.
     2. Responsively adjust row-gap height to be the same as justify-content: space-between.
     3. Responsively adjust header logo to be the same height as surrounding text.
+    4. Add additional screen size breakpoints.
