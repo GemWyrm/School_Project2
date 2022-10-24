@@ -55,3 +55,6 @@ function inputStick () {
         console.log(error);
     });
 };
+$('#menu').click(function(){
+    $('header').toggle();
+});

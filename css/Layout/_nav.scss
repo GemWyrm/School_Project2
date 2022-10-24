@@ -20,3 +20,8 @@ nav {
 .nav-link:not(.active, .disabled) {
     color: $text-color !important;
 }
+@media screen and (max-width: 320px) {
+    ul {
+        flex-direction: column; align-content: center;
+    }
+}

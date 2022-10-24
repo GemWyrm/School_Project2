@@ -7,3 +7,8 @@ h1 {
 h1 img {
     height: 48px; width: auto; object-fit: scale-down;
 }
+@media screen and (max-width: 320px) {
+    header {
+       justify-content: center; flex-direction: column;
+    }
+}

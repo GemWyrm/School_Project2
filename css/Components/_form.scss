@@ -1,3 +1,14 @@
 form {
     display: flex; justify-content: center; padding-bottom: 3px;
 }
+@media screen and (max-width: 320px) {
+    form {
+        flex-direction: column; align-items: center;
+    }
+    label {
+        align-self: start; margin-left: 5px;
+    }
+    #GIFs-tab-pane input {
+        width: 15rem;
+    }
+}

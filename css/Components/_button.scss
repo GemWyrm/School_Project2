@@ -1,0 +1,11 @@
+#menu {
+    display: none;
+}
+button {
+    width: min-content;
+}
+@media screen and (max-width: 320px) {
+    #menu {
+        display: block; align-self: end; margin: 5px 5px 0 0;
+    }
+}
