@@ -3,6 +3,10 @@
 };*/
 /*@import 'bootstrap';*/
 body {
+  font-family: "Mystery Quest", cursive, Trykker, serif;
+}
+
+body {
   background: linear-gradient(90deg, #9E8968, #FFF1DB, #9E8968);
 }
 
@@ -30,6 +34,7 @@ header {
 h1 {
   display: flex;
   align-content: center;
+  font-family: "New Rocker", "Mystery Quest", cursive, Trykker, serif;
 }
 
 h1 img {
@@ -128,7 +133,7 @@ button {
     display: block;
     align-self: end;
     margin: 5px 5px 0 0;
-    padding: 0px 5px 1px 5px !important;
+    padding: 2px 5px 0px 5px !important;
     font-size: small;
   }
 }
